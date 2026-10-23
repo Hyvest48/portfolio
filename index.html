@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artyom — Web Developer &amp; Product Manager</title>
+    <meta name="description" content="Portfolio of Artyom (Hyvest48) — Web Developer working with JavaScript, TypeScript, PHP, Node.js, and SQL.">
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+    <div class="ambient-orb"></div>
+
+    <!-- Floating Navigation Dock -->
+    <header>
+        <nav aria-label="Primary Navigation">
+            <a href="#hero" class="nav-brand" onclick="selectStage(null)">artyom<span>.dev</span></a>
+            <a href="#architecture" class="nav-link" data-section="architecture" onclick="selectStage('architecture')">Architecture</a>
+            <a href="#stack" class="nav-link" data-section="stack" onclick="selectStage('stack')">Tech Stack</a>
+            <a href="#work" class="nav-link" data-section="work" onclick="selectStage('work')">Work</a>
+            <a href="#github" class="nav-link" data-section="github" onclick="selectStage('github')">GitHub</a>
+            <a href="https://github.com/Hyvest48" target="_blank" rel="noopener noreferrer" class="nav-icon-btn" aria-label="GitHub Profile" title="GitHub @Hyvest48">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+            </a>
+            <a href="https://x.com/Artyomxyks" target="_blank" rel="noopener noreferrer" class="nav-cta">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                @Artyomxyks
+            </a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- HERO SECTION (Main Screen - No Active Highlight) -->
+        <section id="hero" class="hero">
+            <div class="status-pill">
+                <span class="status-dot"></span>
+                Building Web Projects &amp; Growing Every Day
+            </div>
+
+            <h1 class="text-gradient">
+                Building clean interfaces &amp; <span class="text-accent">practical web backends</span>.
+            </h1>
+
+            <p class="hero-subtitle">
+                Hi, I’m <strong>Artyom</strong> — a developer focused on creating responsive websites with <strong>JavaScript &amp; TypeScript</strong>, writing server logic in <strong>PHP &amp; Node.js</strong>, and managing digital products on Telegram.
+            </p>
+
+            <div class="hero-domains">
+                <span class="domain-pill"><span class="dot dot-fe"></span>Frontend // HTML, CSS, JS, TS</span>
+                <span class="domain-pill"><span class="dot dot-be"></span>Backend // PHP, Node.js, SQL</span>
+                <span class="domain-pill"><span class="dot dot-sys"></span>Workflow // Git, Payload &amp; Support</span>
+            </div>
+
+            <div class="hero-actions">
+                <a href="https://x.com/Artyomxyks" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    Contact on X
+                </a>
+                <a href="https://github.com/Hyvest48" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    GitHub (@Hyvest48)
+                </a>
+                <a href="#work" class="btn btn-secondary" onclick="selectStage('work')">
+                    View My Projects
+                </a>
+            </div>
+        </section>
+
+        <!-- 01 // ARCHITECTURE -->
+        <section id="architecture" class="section track-section">
+            <div class="section-header">
+                <div class="section-title-row">
+                    <span class="mono-index">01 // Architecture</span>
+                    <h2 class="section-title">How I Build &amp; Work</h2>
+                    <div class="section-line"></div>
+                </div>
+                <p class="section-desc">
+                    My core focus areas divided into client-side layouts, server-side logic, and project operations.
+                </p>
+            </div>
+
+            <div class="domains-grid">
+                <!-- Frontend Card -->
+                <div class="spotlight-card domain-card">
+                    <div>
+                        <div class="domain-header">
+                            <div class="domain-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <span class="domain-badge">Client Side</span>
+                        </div>
+                        <h3>Frontend Development</h3>
+                        <p>
+                            Creating clean, mobile-friendly pages from scratch. I focus on neat layouts, smooth theme switching, and interactive elements using modern JavaScript and TypeScript.
+                        </p>
+                    </div>
+                    <ul class="domain-list">
+                        <li>Semantic HTML5 &amp; Responsive CSS3</li>
+                        <li>Client-Side Logic in JS &amp; TypeScript</li>
+                        <li>Exploring Component UI with React</li>
+                    </ul>
+                </div>
+
+                <!-- Backend Card -->
+                <div class="spotlight-card domain-card">
+                    <div>
+                        <div class="domain-header">
+                            <div class="domain-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                            </div>
+                            <span class="domain-badge">Server Side</span>
+                        </div>
+                        <h3>Backend &amp; Databases</h3>
+                        <p>
+                            Writing practical server-side code to handle user accounts, role permissions, database queries, payment checkouts, and automated Telegram bot notifications.
+                        </p>
+                    </div>
+                    <ul class="domain-list">
+                        <li>Server Logic with PHP &amp; Node.js</li>
+                        <li>SQL Tables &amp; User Role Systems</li>
+                        <li>Telegram Bot API &amp; Payment Flows</li>
+                    </ul>
+                </div>
+
+                <!-- Workflow & Support Card -->
+                <div class="spotlight-card domain-card">
+                    <div>
+                        <div class="domain-header">
+                            <div class="domain-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <span class="domain-badge">Workflow &amp; Ops</span>
+                        </div>
+                        <h3>Security &amp; Product Support</h3>
+                        <p>
+                            Keeping user data and request payloads safe, tracking code changes with Git, and managing live digital products—from running Telegram channels to helping users in support.
+                        </p>
+                    </div>
+                    <ul class="domain-list">
+                        <li>Payload Validation &amp; Data Protection</li>
+                        <li>Version Control with Git</li>
+                        <li>Telegram Channel &amp; Support Management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 // TECH STACK BREAKDOWN -->
+        <section id="stack" class="section track-section">
+            <div class="section-header">
+                <div class="section-title-row">
+                    <span class="mono-index">02 // Tech Stack</span>
+                    <h2 class="section-title">Tools &amp; Technologies</h2>
+                    <div class="section-line"></div>
+                </div>
+                <p class="section-desc">
+                    A concise list of technologies I use in my projects and actively study right now.
+                </p>
+            </div>
+
+            <!-- Interactive Category Filter (Direct onclick + data attributes) -->
+            <div class="filter-tabs" id="stack-tabs" role="tablist" aria-label="Tech Stack Filter">
+                <button type="button" class="tab-btn active" data-filter="all" onclick="window.filterStack('all', this)">All</button>
+                <button type="button" class="tab-btn" data-filter="frontend" onclick="window.filterStack('frontend', this)">Frontend</button>
+                <button type="button" class="tab-btn" data-filter="backend" onclick="window.filterStack('backend', this)">Backend</button>
+                <button type="button" class="tab-btn" data-filter="data" onclick="window.filterStack('data', this)">Data</button>
+                <button type="button" class="tab-btn" data-filter="devops" onclick="window.filterStack('devops', this)">DevOps &amp; Security</button>
+            </div>
+
+            <div class="stack-categories" id="stack-list">
+                <!-- Row 1: Frontend -->
+                <div class="stack-row" data-category="frontend">
+                    <div class="stack-cat-info">
+                        <span class="stack-cat-label">Layer 01</span>
+                        <div class="stack-cat-title">Frontend</div>
+                        <div class="stack-cat-sub">Layout, styling &amp; scripts</div>
+                    </div>
+                    <div class="stack-chips">
+                        <span class="tech-chip"><span class="chip-dot dot-fe"></span>JavaScript</span>
+                        <span class="tech-chip"><span class="chip-dot dot-fe"></span>TypeScript</span>
+                        <span class="tech-chip"><span class="chip-dot dot-fe"></span>HTML5 / CSS3</span>
+                        <span class="tech-chip learning-chip">
+                            <span class="chip-dot dot-fe"></span>React
+                            <span class="badge-learning">Learning</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Row 2: Backend -->
+                <div class="stack-row" data-category="backend">
+                    <div class="stack-cat-info">
+                        <span class="stack-cat-label">Layer 02</span>
+                        <div class="stack-cat-title">Backend</div>
+                        <div class="stack-cat-sub">Server logic &amp; integrations</div>
+                    </div>
+                    <div class="stack-chips">
+                        <span class="tech-chip"><span class="chip-dot dot-be"></span>PHP</span>
+                        <span class="tech-chip"><span class="chip-dot dot-be"></span>Node.js</span>
+                        <span class="tech-chip"><span class="chip-dot dot-be"></span>Telegram API</span>
+                        <span class="tech-chip"><span class="chip-dot dot-be"></span>Payment Integration</span>
+                    </div>
+                </div>
+
+                <!-- Row 3: Data -->
+                <div class="stack-row" data-category="data">
+                    <div class="stack-cat-info">
+                        <span class="stack-cat-label">Layer 03</span>
+                        <div class="stack-cat-title">Data</div>
+                        <div class="stack-cat-sub">Relational databases</div>
+                    </div>
+                    <div class="stack-chips">
+                        <span class="tech-chip"><span class="chip-dot dot-be"></span>SQL</span>
+                        <span class="tech-chip learning-chip">
+                            <span class="chip-dot dot-be"></span>PostgreSQL
+                            <span class="badge-learning">Learning</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Row 4: DevOps & Security -->
+                <div class="stack-row" data-category="devops">
+                    <div class="stack-cat-info">
+                        <span class="stack-cat-label">Layer 04</span>
+                        <div class="stack-cat-title">DevOps &amp; Security</div>
+                        <div class="stack-cat-sub">Version control &amp; protection</div>
+                    </div>
+                    <div class="stack-chips">
+                        <span class="tech-chip"><span class="chip-dot dot-sys"></span>Git</span>
+                        <span class="tech-chip"><span class="chip-dot dot-sys"></span>Payload Protection</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 // SELECTED WORKS -->
+        <section id="work" class="section track-section">
+            <div class="section-header">
+                <div class="section-title-row">
+                    <span class="mono-index">03 // Work</span>
+                    <h2 class="section-title">Projects &amp; Experience</h2>
+                    <div class="section-line"></div>
+                </div>
+                <p class="section-desc">
+                    What I am currently building and managing across Frontend, Backend, and Community Operations.
+                </p>
+            </div>
+
+            <!-- Project Filter Tabs (Direct onclick + data attributes) -->
+            <div class="filter-tabs" id="work-tabs" role="tablist" aria-label="Project Filter">
+                <button type="button" class="tab-btn active" data-proj-filter="all" onclick="window.filterWork('all', this)">All</button>
+                <button type="button" class="tab-btn" data-proj-filter="frontend" onclick="window.filterWork('frontend', this)">Frontend</button>
+                <button type="button" class="tab-btn" data-proj-filter="backend" onclick="window.filterWork('backend', this)">Backend</button>
+                <button type="button" class="tab-btn" data-proj-filter="management" onclick="window.filterWork('management', this)">Management &amp; Support</button>
+            </div>
+
+            <div class="projects-grid" id="work-list">
+                <!-- Project 1: Course Marketplace (Frontend Part) -->
+                <article class="spotlight-card project-card" data-proj-cat="frontend">
+                    <div>
+                        <div class="project-top">
+                            <span class="project-layer-badge badge-fe">Frontend Interface</span>
+                            <span class="project-status-tag">In Development</span>
+                        </div>
+                        <h3>Course Marketplace — Client UI</h3>
+                        <p>
+                            Designing and coding the user interface for an online learning marketplace. Includes adaptive pages for phones and desktops, dark/light theme toggle, course cards, and dashboards for students and teachers.
+                        </p>
+                        <div class="arch-breakdown">
+                            <div class="arch-line">
+                                <span class="arch-key">Layout:</span>
+                                <span class="arch-val">Mobile-first HTML5/CSS3 &amp; theme switcher</span>
+                            </div>
+                            <div class="arch-line">
+                                <span class="arch-key">Scripts:</span>
+                                <span class="arch-val">Interactive dashboards, chat window &amp; modals</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stack-chips">
+                        <span class="tech-chip">HTML5 / CSS3</span>
+                        <span class="tech-chip">JavaScript</span>
+                        <span class="tech-chip">TypeScript</span>
+                    </div>
+                </article>
+
+                <!-- Project 2: Course Marketplace (Backend Part) -->
+                <article class="spotlight-card project-card" data-proj-cat="backend">
+                    <div>
+                        <div class="project-top">
+                            <span class="project-layer-badge badge-be">Backend &amp; Database</span>
+                            <span class="project-status-tag">In Development</span>
+                        </div>
+                        <h3>Course Marketplace — Server Core</h3>
+                        <p>
+                            Building the server-side logic of our educational platform: multi-role accounts (Student, Teacher, Admin), course moderation panel, homework submission checks, payment processing, and payload security.
+                        </p>
+                        <div class="arch-breakdown">
+                            <div class="arch-line">
+                                <span class="arch-key">Backend:</span>
+                                <span class="arch-val">PHP server routes, role access &amp; moderation</span>
+                            </div>
+                            <div class="arch-line">
+                                <span class="arch-key">Database:</span>
+                                <span class="arch-val">SQL tables for users, lessons &amp; homework</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stack-chips">
+                        <span class="tech-chip">PHP</span>
+                        <span class="tech-chip">SQL</span>
+                        <span class="tech-chip">Payment</span>
+                        <span class="tech-chip">Payload</span>
+                    </div>
+                </article>
+
+                <!-- Project 3: Management & Support Experience -->
+                <article class="spotlight-card project-card" data-proj-cat="management">
+                    <div>
+                        <div class="project-top">
+                            <span class="project-layer-badge badge-mgmt">Management &amp; Support</span>
+                            <span class="project-status-tag">Active Role</span>
+                        </div>
+                        <h3>Telegram Service — Operations &amp; Community</h3>
+                        <p>
+                            Managing operations for a Telegram-based digital service. I run the official Telegram channel, publish updates, oversee the customer support account, help users solve connection issues, and work with the bot &amp; payment setup.
+                        </p>
+                        <div class="arch-breakdown">
+                            <div class="arch-line">
+                                <span class="arch-key">Community:</span>
+                                <span class="arch-val">Running the Telegram channel &amp; announcements</span>
+                            </div>
+                            <div class="arch-line">
+                                <span class="arch-key">Support:</span>
+                                <span class="arch-val">Direct user troubleshooting &amp; bot operations</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stack-chips">
+                        <span class="tech-chip">Telegram API</span>
+                        <span class="tech-chip">Payment</span>
+                        <span class="tech-chip">User Support</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 04 // GITHUB & LIVE ACTIVITY FEED -->
+        <section id="github" class="section track-section">
+            <div class="section-header">
+                <div class="section-title-row">
+                    <span class="mono-index">04 // GitHub</span>
+                    <h2 class="section-title">Open Source &amp; Activity Feed</h2>
+                    <div class="section-line"></div>
+                </div>
+                <p class="section-desc">
+                    Live activity, contribution calendar, and public repositories synced directly from my GitHub profile.
+                </p>
+            </div>
+
+            <!-- GitHub Profile Banner -->
+            <div class="spotlight-card gh-profile-bar">
+                <div class="gh-profile-left">
+                    <img id="gh-avatar" src="https://github.com/Hyvest48.png" alt="Hyvest48 GitHub Avatar" class="gh-avatar" loading="lazy">
+                    <div class="gh-user-meta">
+                        <div class="gh-name-row">
+                            <h3 id="gh-name">Artyom</h3>
+                            <span class="gh-handle">@Hyvest48</span>
+                        </div>
+                        <p id="gh-bio" class="gh-bio">Web Developer building frontend interfaces, PHP/Node.js backends, and Telegram integrations.</p>
+                        <div class="gh-stats-row">
+                            <span class="gh-stat-pill">
+                                <span class="dot dot-be"></span>
+                                <strong id="gh-repos-count">—</strong> Public Repos
+                            </span>
+                            <span class="gh-stat-pill">
+                                <span class="dot dot-fe"></span>
+                                <strong id="gh-followers-count">—</strong> Followers
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/Hyvest48" target="_blank" rel="noopener noreferrer" class="btn btn-secondary gh-visit-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    Open GitHub ↗
+                </a>
+            </div>
+
+            <!-- Contribution Calendar Chart -->
+            <div class="spotlight-card gh-chart-card">
+                <div class="gh-card-header">
+                    <span class="gh-card-title">
+                        <span class="status-dot"></span>
+                        Contribution Calendar (@Hyvest48)
+                    </span>
+                    <a href="https://github.com/Hyvest48" target="_blank" rel="noopener noreferrer" class="gh-sublink">github.com/Hyvest48</a>
+                </div>
+                <div class="gh-chart-scroll">
+                    <img src="https://ghchart.rshah.org/10b981/Hyvest48" alt="Hyvest48's GitHub Contribution Chart" class="gh-chart-img" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Two-Column Live Activity Feed & Latest Repositories -->
+            <div class="gh-feed-grid">
+                <!-- Left Column: Recent Activity Stream -->
+                <div class="spotlight-card gh-feed-column">
+                    <div class="gh-card-header">
+                        <span class="gh-card-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                            Recent Activity Feed
+                        </span>
+                        <span class="project-status-tag">Live API</span>
+                    </div>
+                    <div id="gh-events-list" class="gh-events-list">
+                        <div class="gh-loading">Loading recent GitHub activity...</div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Latest Public Repositories -->
+                <div class="spotlight-card gh-feed-column">
+                    <div class="gh-card-header">
+                        <span class="gh-card-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            Latest Repositories
+                        </span>
+                        <span class="project-status-tag">Updated</span>
+                    </div>
+                    <div id="gh-repos-list" class="gh-repos-list">
+                        <div class="gh-loading">Loading repositories...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 // CONTACT CTA -->
+        <section class="section">
+            <div class="spotlight-card contact-card">
+                <span class="mono-index">05 // Contact</span>
+                <h2>Let’s Connect</h2>
+                <p>
+                    Open to collaborating on web projects, discussing frontend or backend development, or chatting on X and GitHub.
+                </p>
+                <div class="contact-actions">
+                    <a href="https://x.com/Artyomxyks" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        Message @Artyomxyks
+                    </a>
+                    <a href="https://github.com/Hyvest48" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        Follow @Hyvest48
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <span>© 2026 Artyom. Built with clean HTML, CSS &amp; JS.</span>
+            <div class="footer-links">
+                <a href="https://github.com/Hyvest48" target="_blank" rel="noopener noreferrer">github.com/Hyvest48 ↗</a>
+                <a href="https://x.com/Artyomxyks" target="_blank" rel="noopener noreferrer">x.com/Artyomxyks ↗</a>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Built-in Bulletproof Functions so buttons ALWAYS work -->
+    <script>
+        // 1. Tech Stack Filter Function
+        window.filterStack = function (category, clickedBtn) {
+            const buttons = document.querySelectorAll('#stack-tabs .tab-btn');
+            buttons.forEach(btn => {
+                const isActive = clickedBtn
+                    ? btn === clickedBtn
+                    : btn.getAttribute('data-filter') === category;
+                btn.classList.toggle('active', isActive);
+            });
+
+            const rows = document.querySelectorAll('#stack-list .stack-row');
+            rows.forEach(row => {
+                const rowCat = row.getAttribute('data-category');
+                const shouldShow = (category === 'all' || rowCat === category);
+                row.classList.toggle('hidden', !shouldShow);
+                row.style.display = shouldShow ? '' : 'none';
+            });
+        };
+
+        // 2. Work Projects Filter Function
+        window.filterWork = function (category, clickedBtn) {
+            const buttons = document.querySelectorAll('#work-tabs .tab-btn');
+            buttons.forEach(btn => {
+                const isActive = clickedBtn
+                    ? btn === clickedBtn
+                    : btn.getAttribute('data-filter-proj') === category || btn.getAttribute('data-proj-filter') === category;
+                btn.classList.toggle('active', isActive);
+            });
+
+            const cards = document.querySelectorAll('#work-list .project-card');
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-proj-cat');
+                const shouldShow = (category === 'all' || cardCat === category);
+                card.classList.toggle('hidden', !shouldShow);
+                card.style.display = shouldShow ? '' : 'none';
+            });
+        };
+
+        // 3. Header Stage Highlighting
+        window.__clickLock = false;
+        window.__clickTimer = null;
+
+        window.setActiveStage = function (sectionId) {
+            document.querySelectorAll('.nav-link[data-section]').forEach(link => {
+                link.classList.toggle('active', link.getAttribute('data-section') === sectionId);
+            });
+            document.querySelectorAll('.track-section').forEach(sec => {
+                sec.classList.toggle('section-active', sec.id === sectionId);
+            });
+        };
+
+        window.selectStage = function (sectionId) {
+            window.__clickLock = true;
+            window.setActiveStage(sectionId);
+            clearTimeout(window.__clickTimer);
+            window.__clickTimer = setTimeout(() => {
+                window.__clickLock = false;
+            }, 900);
+        };
+    </script>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>
